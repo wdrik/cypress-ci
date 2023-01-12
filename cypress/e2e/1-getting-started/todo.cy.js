@@ -2,7 +2,7 @@
 
 describe("example to-do app", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3001");
+    cy.visit("http://localhost:34659");
   });
 
   it("first test", () => {
