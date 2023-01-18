@@ -17,10 +17,6 @@ jobs:
         working-directory: ./next-project
         run: npm install
 
-      - name: Build
-        working-directory: ./next-project
-        run: npm run build
-
       - name: Start
         working-directory: ./next-project
         run: npm run start & npx wait-on http://localhost:3000
