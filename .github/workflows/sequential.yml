@@ -7,11 +7,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Checkout tools repo
+      - name: Checkout next project repo
         uses: actions/checkout@v3
         with:
-          repository: wdrik/clone-twitter-react
-          path: clone-twitter-react
+          repository: wdrik/next-project
+          path: next-project
+
+      - name: Install dependencies
+        working-directory: ./next-project
+        run: npm install
+
+      - name: Build
+        working-directory: ./next-project
+        run: npm run build
 
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
