@@ -24,8 +24,6 @@ jobs:
       - name: Start
         working-directory: ./next-project
         run: npm run start & npx wait-on http://localhost:3000
-      env:
-        CI: true
 
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
